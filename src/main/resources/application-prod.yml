@@ -13,9 +13,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
 
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
   data:
     redis:
-      host: ${REDIS_HOST}
+      host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
 
 server:
