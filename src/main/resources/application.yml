@@ -22,6 +22,11 @@ spring:
 server:
   port: 8080
 
+jwt:
+  secret: taxmate-jwt-secret-key-must-be-at-least-256-bits-long-for-hs256
+  access-token-expiry: 3600000
+  refresh-token-expiry: 604800000
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html

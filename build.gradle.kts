@@ -34,6 +34,14 @@ dependencies {
     // DB
     runtimeOnly("com.mysql:mysql-connector-j")                               // MySQL 드라이버
 
+    // JWT (토큰 기반 인증)
+    implementation("io.jsonwebtoken:jjwt-api:0.12.6")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
+    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.6")
+
+    // 비밀번호 암호화 (Spring Security에 포함되어 있지만 명시적 선언)
+    // BCryptPasswordEncoder는 spring-boot-starter-security에 포함
+
     // Swagger (API 문서 자동 생성)
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6")
 
