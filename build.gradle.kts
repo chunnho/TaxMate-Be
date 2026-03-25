@@ -34,6 +34,9 @@ dependencies {
     // DB
     runtimeOnly("com.mysql:mysql-connector-j")                               // MySQL 드라이버
 
+    // Swagger (API 문서 자동 생성)
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6")
+
     // 테스트
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.security:spring-security-test")
