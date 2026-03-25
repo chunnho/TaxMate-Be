@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3307/billkeeper?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
-    username: billkeeper
-    password: billkeeper1234
+    url: jdbc:mysql://localhost:3307/taxmate?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: taxmate
+    password: taxmate1234
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

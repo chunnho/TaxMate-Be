@@ -1,4 +1,4 @@
-package com.billkeeper.config
+package com.taxmate.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

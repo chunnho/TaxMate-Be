@@ -1,5 +1,6 @@
-package com.billkeeper.controller
+package com.taxmate.controller
 
+import com.taxmate.common.api.ApiResponse
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 class HealthController {
 
     @GetMapping("/api/health")
-    fun health(): Map<String, String> {
-        return mapOf("status" to "ok")
+    fun health(): ApiResponse<Map<String, String>> {
+        return ApiResponse.ok(mapOf("status" to "ok"))
     }
 }

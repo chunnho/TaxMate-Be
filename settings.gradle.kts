@@ -1,1 +1,1 @@
-rootProject.name = "billkeeper"
+rootProject.name = "taxmate"

@@ -1,26 +1,26 @@
 services:
   mysql:
     image: mysql:8.0
-    container_name: billkeeper-mysql
+    container_name: taxmate-mysql
     ports:
       - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root1234
-      MYSQL_DATABASE: billkeeper
-      MYSQL_USER: billkeeper
-      MYSQL_PASSWORD: billkeeper1234
+      MYSQL_DATABASE: taxmate
+      MYSQL_USER: taxmate
+      MYSQL_PASSWORD: taxmate1234
     volumes:
-      - billkeeper-mysql-data:/var/lib/mysql
+      - taxmate-mysql-data:/var/lib/mysql
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
   redis:
     image: redis:7.0
-    container_name: billkeeper-redis
+    container_name: taxmate-redis
     ports:
       - "6380:6379"
     volumes:
-      - billkeeper-redis-data:/data
+      - taxmate-redis-data:/data
 
 volumes:
-  billkeeper-mysql-data:
-  billkeeper-redis-data:
+  taxmate-mysql-data:
+  taxmate-redis-data:
