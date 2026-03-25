@@ -1,0 +1,26 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: billkeeper-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root1234
+      MYSQL_DATABASE: billkeeper
+      MYSQL_USER: billkeeper
+      MYSQL_PASSWORD: billkeeper1234
+    volumes:
+      - billkeeper-mysql-data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  redis:
+    image: redis:7.0
+    container_name: billkeeper-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - billkeeper-redis-data:/data
+
+volumes:
+  billkeeper-mysql-data:
+  billkeeper-redis-data:
